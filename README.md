@@ -1,3 +1,5 @@
 # React Webpack Typescript Starter
 
-> Minimal starter with hot module replacement (HMR) for rapid development.
+> rspack with a react project having basic setup to start a application.
+
+Comparing both rspack and webpack HMR and startup time.
