@@ -25,9 +25,9 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-       type: "asset/resource",
+        type: "asset/resource",
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "index.html.ejs" })],
+  plugins: [new HtmlWebpackPlugin({ template: "index.html" })],
 };

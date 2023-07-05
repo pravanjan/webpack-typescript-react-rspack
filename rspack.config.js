@@ -1,7 +1,8 @@
 const { resolve } = require("path");
-const { HtmlRspackPlugin } = require("@rspack/plugin-html");
 
 module.exports = {
+  mode: process.env.REACT_APP_MODE ? "development" : "production",
+  devtool: "source-map",
   entry: "./index.tsx",
   resolve: {
     extensions: [".tsx", ".jsx", ".ts", ".js", ".json"],
@@ -25,8 +26,7 @@ module.exports = {
     presetEnv: {
       targets: ["Chrome>=48"],
     },
-    html: [{ template: "index.html.ejs" }],
+    html: [{ template: "index.html" }],
   },
   target: ["web", "es5"],
-  Plugin: [new HtmlRspackPlugin({ template: "index.html.ejs" })],
 };
