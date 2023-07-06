@@ -8,9 +8,7 @@
     "webpack",
     "typescript",
     "sass",
-    "hmr",
-    "starter",
-    "boilerplate"
+    "hmr"
   ],
   "author": "Pravanjan",
   "license": "MIT",
@@ -24,11 +22,12 @@
   "homepage": "https://github.com/pavanjan/react-webpack-typescript-starter-rspack",
   "scripts": {
     "build": "yarn run clean-dist && webpack --config=configs/webpack/prod.js",
+    "build:rspack": "yarn run clean-dist && rspack  -c rspack.config.js",
     "clean-dist": "rimraf dist/*",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
-    "start": "npx rspack serve -c rspack.config.js",
-    "start-dev": "npx rspack serve",
-    "start-prod": "yarn run build && node express.js",
+    "start:webpack": "webpack serve -c configs/webpack/dev.js ",
+    "start:rspack": "rspack serve --mode=development",
+    "start:prod": "yarn run build && node express.js",
     "test": "jest --coverage --watchAll --config=configs/jest.json"
   },
   "devDependencies": {
